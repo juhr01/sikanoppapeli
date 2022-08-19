@@ -16,7 +16,24 @@
         <a id="takaisin" href="../projektit/projektit.html">&#8592;Poistu</a>
         <div id="peli">
         <h1>Sikanoppapeli</h1>
-        
+        <button type="button" id="saantonappi" onclick="saannotEsiin()">Säännöt</button>
+        <div id="saannot" style="display: none">
+            <h3>Pelin tarkoitus on kerätä ensimmäisenä 100 pistettä heittämällä noppaa ja laskemalla heittojen summa yhteen.</h3>
+            <br>
+            <h3>Pelaaja voi heittää omalla vuorollaan noppaa niin kauan, kunnes saa ykkösen tai päättää lopettaa heittämisen.</h3>
+            <br>
+            <h3>Jos pelaaja heittää ykkösen, hänen vuoronsa loppuu ja hän ei saa kierrokselta pisteitä. Jos pelaaja lopettaa noppien heittämisen ennen kuin saa ykkösen, heittojen 
+                summa lasketaan yhteen ja lisätään pelaajan pisteisiin.
+            </h3>
+            <br>
+            <h3>Kahdella nopalla pelatessa säännöt muuttuvat siten, että heittämällä tuplat saa tuplapisteet (esim. kaksi nelosta on 16 pistettä).
+                Heittämällä kaksi ykköstä pelaaja saa 25 pistettä, mutta jos ykkösiä heitetään ainoastaan yksi, loppuu pelaajan vuoro ja pisteet nollataan.
+                Jos pelaaja heittää kolme tuplaa peräkkäin, hänen vuoronsa loppuu, eikä hän myöskään saa kyseiseltä kierrokselta pisteitä.
+            </h3>
+        </div>
+
+        <button type="button" id="pelaanappi2" onclick="pelaa2()">Pelaa kahdella pelaajalla</button>
+        <button type="button" id="pelaanappi3" onclick="pelaa3()">Pelaa kolmella pelaajalla</button>
 
         </div>
     </section>
