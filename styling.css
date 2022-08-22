@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
 body {
     overflow-x: hidden;
@@ -12,13 +7,9 @@ body {
     background-size: cover;
     max-width: 100%;
 	height: 100%;
+    font-size:50%;
 }
 
-#info {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5em;
-}
 
 .container {
     display: flex;
@@ -39,47 +30,6 @@ body {
     margin-top: 2em;
 }
 
-#display {
-    margin-bottom: 1em;
-}
-
-#multiply {
-    margin-bottom: 1em;
-}
-
-#keksi {
-    background-color: #383838;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    max-width: 350px;
-    padding: 2em;
-    color: white;
-    margin-bottom: 2em;
-}
-
-#ok {
-    margin-top: 10px;
-    background-color: red;
-    color: white;
-    border:none;
-    width: 140px;
-    height: 40px;
-}
-
-#ok:hover {
-    background-color: rgb(201, 0, 0);
-    
-}
-
-#roll {
-    color: white;
-}
-
-#roll:hover {
-    color: grey;
-}
 
 footer {
     position:fixed;
@@ -106,18 +56,16 @@ footer {
 
   #takaisin {
     display: block;
-    width: 100px;
     padding: 10px 20px;
     border: 0;
     background: #333;
     color: #fff;
     border-radius: 5px;
-    margin-left: 2rem;
     text-decoration: none;
   }
 
   #takaisin:hover {
-    background: #444;
+    background: grey;
     color:black;
     text-decoration: none;
   }
@@ -127,4 +75,86 @@ footer {
     #peli {
         flex-direction: column;
     }
+  }
+
+ 
+
+  .nappi {
+    display: block;
+    padding: 10px 20px;
+    border: 0;
+    background: #333;
+    color: #fff;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    text-decoration: none;
+  }
+
+  .nappi:hover {
+    background: grey;
+    color:black;
+    text-decoration: none;
+  }
+
+  .pelaajanimi {
+    border-radius: 5px;
+  }
+
+  .pelaajanimilabel {
+    font-weight:bold;
+    margin-right: 0.5em;
+  }
+
+  .noppavalinta {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #yksiNoppa2p {
+    margin-right: 1em;
+  }
+
+  #yksiNoppa3p {
+    margin-right: 1em;
+  }
+
+  #kaksiPelaajaaSetup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  #kolmePelaajaaSetup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pelaajat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+
+  .pelaaja1 {
+    display:flex;
+    flex-direction: row;
+
+  }
+
+  .pelaaja2 {
+    display:flex;
+    flex-direction: row;
+    
+  }
+
+  .pelaaja3 {
+    display:flex;
+    flex-direction: row;
+    
   }
