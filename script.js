@@ -14,19 +14,21 @@ let pelaaja1 = "Pelaaja 1";
 let pelaaja2 = "Pelaaja 2";
 let pelaaja3 = "Pelaaja 3";
 
+let noppa1 = 0;
+let noppa2 = 0
 
-let noppa0 = new Image();
-noppa0.src = "kuvat/noppa1.png"
-let noppa1 = new Image();
-noppa1.src = "kuvat/noppa2.png"
-let noppa2 = new Image();
-noppa2.src = "kuvat/noppa3.png"
-let noppa3 = new Image();
-noppa3.src = "kuvat/noppa4.png"
-let noppa4 = new Image();
-noppa4.src = "kuvat/noppa5.png"
-let noppa5 = new Image();
-noppa5.src = "kuvat/noppa6.png"
+let nopat0 = new Image();
+nopat0.src = "kuvat/noppa1.png"
+let nopat1 = new Image();
+nopat1.src = "kuvat/noppa2.png"
+let nopat2 = new Image();
+nopat2.src = "kuvat/noppa3.png"
+let nopat3 = new Image();
+nopat3.src = "kuvat/noppa4.png"
+let nopat4 = new Image();
+nopat4.src = "kuvat/noppa5.png"
+let nopat5 = new Image();
+nopat5.src = "kuvat/noppa6.png"
 
 
 function saannotEsiin() {
@@ -142,14 +144,14 @@ function kolmePelaajaa() {
     
 }
 
-function arvoNoppa() {
+function arvoNopat() {
     noppa1 = Math.round(Math.random() * 5)
     if (noppienMaara == 2) {
         noppa2 = Math.round(Math.random() * 5)
     }
 
-    document.getElementById("noppa1").src = eval("noppa" + noppa1 + ".src");
-    document.getElementById("noppa2").src = eval("noppa" + noppa2 + ".src");
+    document.getElementById("noppa1").src = eval("nopat" + noppa1 + ".src");
+    document.getElementById("noppa2").src = eval("nopat" + noppa2 + ".src");
 
 }
 
@@ -162,7 +164,7 @@ function pelaa() {
 }
 
 function heita() {
-    arvoNoppa();
+    arvoNopat();
     arvioiTulos();
 }
 
@@ -235,9 +237,56 @@ function lopetaVuoro() {
         document.getElementById("peliloppu").style.display = "block";
     }
 
+    if (pelivuoro == 3 && pelaajienMaara == 3) {
+        pelivuoro = 1;
+        document.getElementById("pelivuoro").innerHTML = pelaaja1;
+        pisteet3 = pisteetNyt + pisteet3;
+        document.getElementById("pelaaja3p").innerHTML = pisteet3;
+        vaihdaVuoroa();
+        return;
+    }
+
+    if (pelivuoro == 2 && pelaajienMaara == 2) {
+        pelivuoro = 1;
+        document.getElementById("pelivuoro").innerHTML = pelaaja1;
+        pisteet2 = pisteetNyt + pisteet2;
+        document.getElementById("pelaaja2p").innerHTML = pisteet2;
+        vaihdaVuoroa();
+        return;
+    }
+
+    if (pelivuoro == 2 && pelaajienMaara == 3) {
+        pelivuoro = pelivuoro + 1;
+        document.getElementById("pelivuoro").innerHTML = pelaaja3;
+        pisteet2 = pisteetNyt + pisteet2;
+        document.getElementById("pelaaja2p").innerHTML = pisteet2;
+        vaihdaVuoroa();
+        return;
+    }
+   
+    if (pelivuoro == 1) {
+        pelivuoro == pelivuoro + 1;
+        document.getElementById("pelivuoro").innerHTML = pelaaja2;
+        pisteet1 = pisteet1 + pisteetNyt;
+        document.getElementById("pelaaja1p").innerHTML = pisteet1;
+        vaihdaVuoroa();
+        return;
+    }
+
+
 
 }
 
 function peliLoppuu() {
     
 }
+
+function vaihdaVuoroa() {
+    pisteetNyt = 0;
+    tuplat = 0;
+
+    document.getElementById("noppa1").src = "kuvat/tyhjanoppa.png";
+    document.getElementById("noppa2").src = "kuvat/tyhjanoppa.png";
+    document.getElementById("tupliaHeitetty").innerHTML = tuplat; 
+}
+
