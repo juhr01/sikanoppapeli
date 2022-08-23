@@ -1,6 +1,8 @@
 let pelaajienMaara = 0;
 let noppienMaara = 0;
 
+let tuplat = 0;
+
 let pisteetNyt = 0;
 let pelivuoro = 1;
 
@@ -71,7 +73,17 @@ function pelaa3SetupEsiin() {
     }
 }
 
-function asetaNimet2() {
+
+
+function yksiNoppa() {
+    noppienMaara = 1;
+}
+
+function kaksiNoppaa() {
+    noppienMaara = 2;
+}
+
+function kaksiPelaajaa() {
     if (document.getElementById("pelaaja1nimi2").value.trim().length == 0) {
         pelaaja1 = "Pelaaja 1";
     } else {
@@ -87,7 +99,7 @@ function asetaNimet2() {
     pelaajienMaara = 2;
 }
 
-function asetaNimet3() {
+function kolmePelaajaa() {
     if (document.getElementById("pelaaja1nimi3").value.trim().length == 0) {
         pelaaja1 = "Pelaaja 1";
     } else {
@@ -107,41 +119,11 @@ function asetaNimet3() {
     }
 
     pelaajienMaara = 3;
-
 }
 
-function yksiN2p() {
-    asetaNimet2();
-    pelaajienMaara = 2;
-    noppienMaara = 1;
-    pelaa();
-}
-
-function kaksiN2p() {
-    asetaNimet2();
-    pelaajienMaara = 2;
-    noppienMaara = 2;
-    pelaa();
-}
-
-function yksiN3p() {
-    asetaNimet3();
-    pelaajienMaara = 3;
-    noppienMaara = 1;
-    pelaa();
-}
-
-function kaksiN3p() {
-    asetaNimet3();
-    pelaajienMaara = 3;
-    noppienMaara = 2;
-    pelaa();
-}
 
 function pelaa() {
-    document.getElementById("pelaanappi2").style.display = "none";
-    document.getElementById("saantonappi").style.display = "none";
-    document.getElementById("pelaanappi3").style.display = "none";
-    document.getElementById("kaksiPelaajaaSetup").style.display = "none";
-    document.getElementById("kolmePelaajaaSetup").style.display = "none";
+    document.getElementById("valikko").style.display = "none";
+    document.getElementById("")
+
 }

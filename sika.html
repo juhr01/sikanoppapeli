@@ -14,90 +14,116 @@
 
     <section class="container">
         <a id="takaisin" href="../projektit/projektit.html">&#8592;Takaisin projekteihin</a>
-        <div id="peli">
+        <div id="pelialue">
             <h1>Sikanoppapeli</h1>
-            <br>
-            <button type="button" class="nappi" id="saantonappi" onclick="saannotEsiin()">Säännöt</button>
-            <div id="saannot" style="display: none">
-                <h4>Pelin tarkoitus on kerätä ensimmäisenä 100 pistettä heittämällä noppaa ja laskemalla heittojen summa
-                    yhteen.</h4>
+            <div id="valikko">
                 <br>
-                <h4>Pelaaja voi heittää omalla vuorollaan noppaa niin kauan, kunnes saa ykkösen tai päättää lopettaa
-                    heittämisen.</h4>
-                <br>
-                <h4>Jos pelaaja heittää ykkösen, hänen vuoronsa loppuu ja hän ei saa kierrokselta pisteitä. Jos pelaaja
-                    lopettaa noppien heittämisen ennen kuin saa ykkösen, heittojen
-                    summa lasketaan yhteen ja lisätään pelaajan pisteisiin.
-                </h4>
-                <br>
-                <h4>Kahdella nopalla pelatessa säännöt muuttuvat siten, että heittämällä tuplat saa tuplapisteet (esim.
-                    kaksi nelosta on 16 pistettä).
-                    Heittämällä kaksi ykköstä pelaaja saa 25 pistettä, mutta jos ykkösiä heitetään ainoastaan yksi,
-                    loppuu pelaajan vuoro ja pisteet nollataan.
-                    Jos pelaaja heittää kolme tuplaa peräkkäin, hänen vuoronsa loppuu, eikä hän myöskään saa kyseiseltä
-                    kierrokselta pisteitä.
-                </h4>
+                <button type="button" class="nappi" id="saantonappi" onclick="saannotEsiin()">Säännöt</button>
+                <div id="saannot" style="display: none">
+                    <h4>Pelin tarkoitus on kerätä ensimmäisenä 100 pistettä heittämällä noppaa ja laskemalla heittojen
+                        summa
+                        yhteen.</h4>
+                    <br>
+                    <h4>Pelaaja voi heittää omalla vuorollaan noppaa niin kauan, kunnes saa ykkösen tai päättää lopettaa
+                        heittämisen.</h4>
+                    <br>
+                    <h4>Jos pelaaja heittää ykkösen, hänen vuoronsa loppuu ja hän ei saa kierrokselta pisteitä. Jos
+                        pelaaja
+                        lopettaa noppien heittämisen ennen kuin saa ykkösen, heittojen
+                        summa lasketaan yhteen ja lisätään pelaajan pisteisiin.
+                    </h4>
+                    <br>
+                    <h4>Kahdella nopalla pelatessa säännöt muuttuvat siten, että heittämällä tuplat saa tuplapisteet
+                        (esim.
+                        kaksi nelosta on 16 pistettä).
+                        Heittämällä kaksi ykköstä pelaaja saa 25 pistettä, mutta jos ykkösiä heitetään ainoastaan yksi,
+                        loppuu pelaajan vuoro ja pisteet nollataan.
+                        Jos pelaaja heittää kolme tuplaa peräkkäin, hänen vuoronsa loppuu, eikä hän myöskään saa
+                        kyseiseltä
+                        kierrokselta pisteitä.
+                    </h4>
+                </div>
+
+                <button type="button" class="nappi" id="pelaanappi2" onclick="pelaa2SetupEsiin()">2 Pelaajaa</button>
+                <div id="kaksiPelaajaaSetup" style="display: none">
+                    <div class="pelaajat">
+                        <div class="pelaaja1i">
+                            <label for="pelaaja1nimi2" class="pelaajanimilabel">Pelaaja 1:</label>
+                            <input type="text" class="pelaajanimiinput" id="pelaaja1nimi2">
+                        </div>
+                        <br>
+                        <div class="pelaaja2i">
+                            <label for="pelaaja2nimi2" class="pelaajanimilabel">Pelaaja 2:</label>
+                            <input type="text" class="pelaajanimiinput" id="pelaaja2nimi2">
+                        </div>
+
+                    </div>
+
+                    <div class="noppavalinta">
+                        <button type="button" class="nappi" id="yksiNoppa2p" onclick="yksiNoppa(), kaksiPelaajaa()">Pelaa yhdellä
+                            nopalla</button>
+                        <button type="button" class="nappi" id="kaksiNoppa2p" onclick="kaksiNoppaa(), kaksiPelaajaa()">Pelaa kahdella
+                            nopalla</button>
+                    </div>
+
+                </div>
+                <button type="button" class="nappi" id="pelaanappi3" onclick="pelaa3SetupEsiin()">3 Pelaajaa</button>
+                <div id="kolmePelaajaaSetup" style="display: none">
+                    <div class="pelaajat">
+                        <div class="pelaaja1i">
+                            <label for="pelaaja1nimi3" class="pelaajanimilabel">Pelaaja 1:</label>
+                            <input type="text" class="pelaajanimiinput" id="pelaaja1nimi3">
+                        </div>
+
+                        <br>
+
+                        <div class="pelaaja2i">
+                            <label for="pelaaja2nimi3" class="pelaajanimilabel">Pelaaja 2:</label>
+                            <input type="text" class="pelaajanimiinput" id="pelaaja2nimi3">
+                        </div>
+
+                        <br>
+
+                        <div class="pelaaja3i">
+                            <label for="pelaaja3nimi3" class="pelaajanimilabel">Pelaaja 3:</label>
+                            <input type="text" class="pelaajanimiinput" id="pelaaja3nimi3">
+                        </div>
+
+                    </div>
+
+                    <div class="noppavalinta">
+                        <button type="button" class="nappi" id="yksiNoppa3p" onclick="yksiNoppa(), kolmePelaajaa()">Pelaa yhdellä
+                            nopalla</button>
+                        <button type="button" class="nappi" id="kaksiNoppa3p" onclick="kaksiNoppaa(), kolmePelaajaa()">Pelaa kahdella
+                            nopalla</button>
+                    </div>
+
+                </div>
             </div>
 
-            <button type="button" class="nappi" id="pelaanappi2" onclick="pelaa2SetupEsiin()">2 Pelaajaa</button>
-            <div id="kaksiPelaajaaSetup" style="display: none">
-                <div class="pelaajat">
-                    <div class="pelaaja1">
-                        <label for="pelaaja1nimi" class="pelaajanimilabel">Pelaaja 1:</label>
-                        <input type="text" class="pelaajanimi" id="pelaaja1nimi2">
-                    </div>
-                    <br>
-                    <div class="pelaaja2">
-                        <label for="pelaaja2nimi" class="pelaajanimilabel">Pelaaja 2:</label>
-                        <input type="text" class="pelaajanimi" id="pelaaja2nimi2">
-                    </div>
-
+            <div id="peli" style="display: block">
+                <div id="tilasto">
+                    <p id="pelaaja1t" style="display: block"><span id="pelaaja1">Pelaaja 1</span>:<span id="pelaaja1p"> 0</span> Pistettä</p>
+                    <p id="pelaaja2t" style="display: block"><span id="pelaaj2">Pelaaja 2</span>:<span id="pelaaja2p"> 0</span> Pistettä</p>
+                    <p id="pelaaja3t" style="display: block"><span id="pelaaja3">Pelaaja 3</span>:<span id="pelaaja3p"> 0</span> Pistettä</p>
                 </div>
-
-                <div class="noppavalinta">
-                    <button type="button" class="nappi" id="yksiNoppa2p" onclick="yksiN2p()">Pelaa yhdellä
-                        nopalla</button>
-                    <button type="button" class="nappi" id="kaksiNoppa2p" onclick="kaksiN2p()">Pelaa kahdella
-                        nopalla</button>
+                <div id="pelivuorolaatikko">
+                    <p>Pelivuorossa <span id="pelivuoro"></span></p>
                 </div>
-
-            </div>
-            <button type="button" class="nappi" id="pelaanappi3" onclick="pelaa3SetupEsiin()">3 Pelaajaa</button>
-            <div id="kolmePelaajaaSetup" style="display: none">
-                <div class="pelaajat">
-                    <div class="pelaaja1">
-                        <label for="pelaaja1nimi" class="pelaajanimilabel">Pelaaja 1:</label>
-                        <input type="text" class="pelaajanimi" id="pelaaja1nimi3">
-                    </div>
-
-                    <br>
-
-                    <div class="pelaaja2">
-                        <label for="pelaaja2nimi" class="pelaajanimilabel">Pelaaja 2:</label>
-                        <input type="text" class="pelaajanimi" id="pelaaja2nimi3">
-                    </div>
-
-                    <br>
-
-                    <div class="pelaaja3">
-                        <label for="pelaaja3nimi" class="pelaajanimilabel">Pelaaja 3:</label>
-                        <input type="text" class="pelaajanimi" id="pelaaja3nimi3">
-                    </div>
-
-                </div>
-
-                <div class="noppavalinta">
-                    <button type="button" class="nappi" id="yksiNoppa3p" onclick="yksiN3p()">Pelaa yhdellä
-                        nopalla</button>
-                    <button type="button" class="nappi" id="kaksiNoppa3p" onclick="kaksiN3p()">Pelaa kahdella
-                        nopalla</button>
-                </div>
-
-            </div>
-
-            <div id="peliKaynnissa">
-                <p id="pelivuorossa"></p>
                 
+                <div id="nopat">
+                    <img src="kuvat/tyhjanoppa.png" width="100 px" id="noppa1">
+                    <img src="kuvat/tyhjanoppa.png" width="100 px" id="noppa2">
+                </div>
+                <div id="napit">
+                    <button type="button" class="nappi" id="heita">Heitä noppaa</button>
+                    <button type="button" class="nappi" id="lopeta">Lopeta vuoro</button>
+                </div>
+                <div id="tilanne">
+                    <p id="pisteetNyt">Pisteet nyt: <span id="pisteet"></span> </p>
+                    <p id="tupliaHeitetty">Tuplia heitetty: <span id="tuplat"></span> </p>
+
+                </div>
             </div>
 
         </div>
