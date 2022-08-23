@@ -101,29 +101,32 @@
                 </div>
             </div>
 
-            <div id="peli" style="display: block">
+            <div id="peli" style="display: none">
                 <div id="tilasto">
                     <p id="pelaaja1t" style="display: block"><span id="pelaaja1">Pelaaja 1</span>:<span id="pelaaja1p"> 0</span> Pistettä</p>
                     <p id="pelaaja2t" style="display: block"><span id="pelaaj2">Pelaaja 2</span>:<span id="pelaaja2p"> 0</span> Pistettä</p>
-                    <p id="pelaaja3t" style="display: block"><span id="pelaaja3">Pelaaja 3</span>:<span id="pelaaja3p"> 0</span> Pistettä</p>
+                    <p id="pelaaja3t" style="display: none"><span id="pelaaja3">Pelaaja 3</span>:<span id="pelaaja3p"> 0</span> Pistettä</p>
                 </div>
                 <div id="pelivuorolaatikko">
                     <p>Pelivuorossa <span id="pelivuoro"></span></p>
                 </div>
                 
                 <div id="nopat">
-                    <img src="kuvat/tyhjanoppa.png" width="100 px" id="noppa1">
-                    <img src="kuvat/tyhjanoppa.png" width="100 px" id="noppa2">
+                    <img src="kuvat/tyhjanoppa.png" width="100 px" id="noppa1" style="display: none">
+                    <img src="kuvat/tyhjanoppa.png" width="100 px" id="noppa2" style="display: none">
                 </div>
                 <div id="napit">
-                    <button type="button" class="nappi" id="heita">Heitä noppaa</button>
-                    <button type="button" class="nappi" id="lopeta">Lopeta vuoro</button>
+                    <button type="button" class="nappi" id="heita" onclick="heita()" >Heitä noppaa</button>
+                    <button type="button" class="nappi" id="lopeta" onclick="lopetaVuoro()" >Lopeta vuoro</button>
                 </div>
                 <div id="tilanne">
                     <p id="pisteetNyt">Pisteet nyt: <span id="pisteet"></span> </p>
-                    <p id="tupliaHeitetty">Tuplia heitetty: <span id="tuplat"></span> </p>
+                    <p id="tupliaHeitetty" style="display: none">Tuplia heitetty: <span id="tuplat"></span> </p>
 
                 </div>
+            </div>
+            <div id="peliloppu" style="display: none">
+                <p><span id="voittaja"></span> Voitti pelin!</p>
             </div>
 
         </div>
