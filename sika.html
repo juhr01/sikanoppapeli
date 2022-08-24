@@ -60,9 +60,9 @@
                     </div>
 
                     <div class="noppavalinta">
-                        <button type="button" class="nappi" id="yksiNoppa2p" onclick="yksiNoppa(), kaksiPelaajaa()">Pelaa yhdellä
+                        <button type="button" class="nappi" id="yksiNoppa2p" onclick="kaksiPelaajaa(), yksiNoppa()">Pelaa yhdellä
                             nopalla</button>
-                        <button type="button" class="nappi" id="kaksiNoppa2p" onclick="kaksiNoppaa(), kaksiPelaajaa()">Pelaa kahdella
+                        <button type="button" class="nappi" id="kaksiNoppa2p" onclick="kaksiPelaajaa(), kaksiNoppaa()">Pelaa kahdella
                             nopalla</button>
                     </div>
 
@@ -92,9 +92,9 @@
                     </div>
 
                     <div class="noppavalinta">
-                        <button type="button" class="nappi" id="yksiNoppa3p" onclick="yksiNoppa(), kolmePelaajaa()">Pelaa yhdellä
+                        <button type="button" class="nappi" id="yksiNoppa3p" onclick="kolmePelaajaa(), yksiNoppa()">Pelaa yhdellä
                             nopalla</button>
-                        <button type="button" class="nappi" id="kaksiNoppa3p" onclick="kaksiNoppaa(), kolmePelaajaa()">Pelaa kahdella
+                        <button type="button" class="nappi" id="kaksiNoppa3p" onclick=" kolmePelaajaa(), kaksiNoppaa()">Pelaa kahdella
                             nopalla</button>
                     </div>
 
@@ -103,9 +103,9 @@
 
             <div id="peli" style="display: none">
                 <div id="tilasto">
-                    <p id="pelaaja1t" style="display: block"><span id="pelaaja1">Pelaaja 1</span>:<span id="pelaaja1p"> 0</span> Pistettä</p>
-                    <p id="pelaaja2t" style="display: block"><span id="pelaaj2">Pelaaja 2</span>:<span id="pelaaja2p"> 0</span> Pistettä</p>
-                    <p id="pelaaja3t" style="display: none"><span id="pelaaja3">Pelaaja 3</span>:<span id="pelaaja3p"> 0</span> Pistettä</p>
+                    <p id="pelaaja1t" style="display: block"><span id="pelaaja1">Pelaaja 1</span>: <span id="pelaaja1p"> 0</span> Pistettä</p>
+                    <p id="pelaaja2t" style="display: block"><span id="pelaaja2">Pelaaja 2</span>: <span id="pelaaja2p"> 0</span> Pistettä</p>
+                    <p id="pelaaja3t" style="display: none"><span id="pelaaja3">Pelaaja 3</span>: <span id="pelaaja3p"> 0</span> Pistettä</p>
                 </div>
                 <div id="pelivuorolaatikko">
                     <p>Pelivuorossa <span id="pelivuoro"></span></p>
@@ -122,6 +122,8 @@
                 <div id="tilanne">
                     <p id="pisteetNyt">Pisteet nyt: <span id="pisteet"></span> </p>
                     <p id="tupliaHeitetty" style="display: none">Tuplia heitetty: <span id="tuplat"></span> </p>
+                    <p id="vuoroohi" style="display: none">Vuoro ohi.</p>
+                    <button type="button" class="nappi" id="jatka" style="display: none" onclick="jatka()">Jatka</button>
 
                 </div>
             </div>
