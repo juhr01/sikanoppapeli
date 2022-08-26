@@ -124,18 +124,21 @@ function kolmePelaajaa() {
         pelaaja1 = "Pelaaja 1";
     } else {
         pelaaja1 = document.getElementById("pelaaja1nimi3").value;
+        document.getElementById("pelaaja1").innerHTML = pelaaja1;
     }
 
     if (document.getElementById("pelaaja2nimi3").value.trim().length == 0) {
         pelaaja2 = "Pelaaja 2";
     } else {
         pelaaja2 = document.getElementById("pelaaja2nimi3").value;
+        document.getElementById("pelaaja2").innerHTML = pelaaja2;
     }
 
     if (document.getElementById("pelaaja3nimi3").value.trim().length == 0) {
         pelaaja3 = "Pelaaja 3";
     } else {
         pelaaja3 = document.getElementById("pelaaja3nimi3").value;
+        document.getElementById("pelaaja3").innerHTML = pelaaja3;
     }
 
     pelaajienMaara = 3;
